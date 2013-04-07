@@ -1,0 +1,91 @@
+Restaurant
+<Name,ID,CuisineType,Address,Location,Rating,Popularity,Cost,Timing,CreditCard,Veg/Non-veg,HomeDelivery,Latitude>
+Cuisine<Id,Type>
+ Billing
+<BillID,Name,ContactNo,FinalAmount>
+
+CREATE TABLE directions
+(
+  id int primary key,
+  name varchar(100),
+  lat varchar(100),
+  lon varchar(100)
+);
+
+CREATE TABLE Restaurant
+(
+  id int primary key,
+  name varchar(100),
+  cus varchar(30) references Cuisine(type),
+  addr varchar(100),
+  loc varchar(50),
+  rate int,
+  pop int,
+  cost varchar(50),
+  time varchar(100),
+  ccd varchar(100),
+  nv varchar(100),
+  hd varchar(100),
+  lat varchar(50),
+	lon varchar(50),
+pic_count int
+);
+CREATE Cuisine
+( 
+  id int primary key,
+  name varchar(100)
+);
+
+insert into Cuisine values(1,'Indian');
+insert into Cuisine values(2,'Chinese');
+insert into Cuisine values(3,'Italian');
+insert into Cuisine values(4,'Continental');
+insert into directions values(1,'Adyar',13.00117740,80.25649570);
+insert into directions values(2,'Nungabakkam',13.06106770,80.24049590);
+insert into directions values(3,'Besant Nagar',12.99947910,80.26837180);
+insert into directions values(4,'Teynampet',13.03928810,80.24816269999999);
+insert into directions values(5,'Anna Nagar',13.08574850,80.21539980);
+insert into directions values(6,'Ashok nagar',13.03860150,80.21121640);
+insert into directions values(7,'Ramapuram',13.0251420,80.18543690);
+
+
+ insert into Restaurant values(21,'Eden','North Indian','Eden 7 Ground Floor  Asha Manor Complex  3rd Avenue’,'Anna Nagar',4,0,’Costly','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.08480270, 80.21791130,3);
+
+ insert into Restaurant values(22,'Kim Ling','Chinese',' Kim Ling AC 2, 4909, Teja Towers Basement, 2nd Avenue Anna Nagar East','Anna Nagar',3,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.08457090, 80.22027260,3);
+
+ insert into Restaurant values(23,'Inchins','North Indian',' Inchins 42/1, Shantiniketan Colony, State Highway 112 Thirumangalam,Anna Ngar West Ext','Anna Nagar',2,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.08574850 , 80.21539980,3);
+
+ insert into Restaurant values(24,'Dindugal Thalapakathu','Indian',' Thalapakathu F11, 2nd Main Road, Behind Valliamal College ','Anna Nagar',5,0,' Costly ','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.08574850 , 80.21539980,3);
+
+ insert into Restaurant values(25,'Sigree','North Indian','Sigree 144/145,5th Floor, Hotel Aruna Complex,Sterling Road ','Nungambakkam',1,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.064990 , 80.23902009999999 ,3);
+
+ insert into Restaurant values(26,'PapaJohn’s','Italian',' PapaJohn’s  29, HM Center, Nungambakkam High Road ','Nungambakkam',2,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.06510960, 80.2369130,3);
+
+ insert into Restaurant values(27,'Kryptos By Willis','Continental',' Kryptos By Willis  24, Khadar Nawaz Khan Road, Nungambakkam,.','Nungambakkam',3,0,' Cheap ','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.06069870 , 80.25004790 ,3);
+
+ insert into Restaurant values(28,'Cream Center','Italian',' Cream Center  45, College Road, Near Madras Alliance Francaise,Nungambakkam ','Nungambakkam',4,0,'Cheap','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.06656110 , 80.24572850,3);
+
+ insert into Restaurant values(29,'Mainland China','Chinese',' Mainland China  144/145, Hotel Tulip, Aruna Complex, Sterling Road,Nungambakkam ','Nungambakkam',5,0,'Cheap','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.064990, 80.23902009999999,3);
+
+ insert into Restaurant values(30,'Crimson Chakra','Continental',' Crimson Chakra  7, Khader Nawaz Khan Road, Nungambakkam ','T.Nagar',1,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 13.05980670 , 80.24792870,3);
+
+insert into Restaurant values(1,'Wangs Kitchen','Indian',' Wangs Kitchen  North Boag Road T.Nagar,Chennai-17','T.Nagar',2,0,'Moderate','11am-10pm','Accepted','Non-Vegetarian','Take-Away',13.04340040, 80.24460259999999,3);
+insert into Restaurant values(3,'Pizza Hut','Italian',' Pizza Hut  2nd Avenue Anna Nagar,Chennai-47','Anna Nagar',2,0,'Cheap','11am-9pm','Accepted','Non-Vegetarian','Take-Away',13.08527680, 80.19946860,3);
+insert into Restaurant values(2,'Rain Forest','Chinese',' Rain Forest  Kasturbhai Nagar Adyar,Chennai-17','Adyar',2,0,'Costly','12pm-1am','Accepted','Vegetarian','Take-Away',13.00664310,80.24993239999999,3);
+insert into Restaurant values(31,'Chin Chin','Chinese',' Chin Chin  49 GN Chetty Road T.Nagar','T.Nagar',3,0,'Costly','9am-10pm','Accepted','Vegetarian','Take-Away', 13.05145310,80.24979010,3);
+
+insert into Restaurant values(32,'Ras Bhojan','North Indian',' Ras Bhojan  148, Habibullah Road, T. Nagar, Chennai
+','T.Nagar',2,0,'Moderate','9am-11pm','Accepted','Non-Vegetarian','Take-Away',       13.04968440,80.24023339999999,3);
+
+insert into Restaurant values(33,'Chef express','Italian',' Chef express 14 A, Masilamani Street, T. Nagar, Chennai  
+','T.Nagar',4,0,'Cheap','12pm-1am','Accepted','Vegetarian','Take-Away', 13.03913840,80.23946020
+ 3);
+ insert into Restaurant values(34,'Mast Kalandar','North Indian',' Mast Kalandar  MG Road, Shastri Nagar, Adyar, Chennai
+ ','Adyar',3,0,'Costly','11am-10pm','Accepted','Non-Vegetarian','Take-Away', 12.99405320, 80.2648847,3);
+insert into Restaurant values(35,'Italica','Italian',' Italica  3rd Cross Road, RA Puram, Chennai 
+ ','Adyar',1,0,'Very Costly','11am-10pm','Accepted','Vegetarian','Take-Away', 13.02802520,80.25636109999999,3);
+insert into Restaurant values(36,'SpoonBill','Continental',' SpoonBill  239/107, TTK Road, Alwarpet, Chennai  
+','Adyar',2,0,'Moderate','10am-11pm','Accepted','Non-Vegetarian','Take-Away', 13.02994290, 80.25063190,3);
+
+
+
